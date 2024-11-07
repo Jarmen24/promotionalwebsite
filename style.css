@@ -1,20 +1,26 @@
 :root {
-	--brown: #251F20;
-	--brown2: #423C3D;
+	--blue: #001242;
+	--blue2: #0094c6;
+	--gradient: linear-gradient(45deg, #001242, #0094c6);
 	--white: #F4F4F4;
 	--white2: #B1AEAF;
 }
-.brown {
-	color: var(--brown);
+.blue {
+	color: var(--blue);
 }
-.brown2 {
-	color: var(--brown2);
+.blue2 {
+	color: var(--blue2);
 }
 .white {
 	color: var(--white);
 }
 .white2 {
 	color: var(--white2);
+}
+.gradient {
+	color: transparent;
+	background: var(--gradient);
+	-webkit-background-clip: text;
 }
 * {
 	margin: 0;
@@ -73,12 +79,9 @@ p {
 	left: 0;
 	margin: 2em 2em;
 	border-radius: 50px;
-	background-color: #251F20;
+	background-color: var(--blue);
 }
-.title {
-	font-size: 3rem;
-	font-weight: 900;
-}
+
 .title {
 	font-size: 2.5rem;
 	font-weight: 800;
@@ -138,7 +141,7 @@ p {
 nav {
 	display: flex;
 	justify-content: space-between;
-	background-color: #251F20;
+	background-image: var(--gradient);
 	padding: 1em 2em;
 	border-radius: 50px;
 	position: sticky;
@@ -157,6 +160,7 @@ a {
 	align-items: center;
 	gap: 2em;
 	font-weight: 700;
+	font-size: 1.2rem;
 }
 
 #brand {
@@ -167,7 +171,7 @@ a {
 footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr ;
-	background-color: #251F20;
+	background-image: var(--gradient);
 	padding: 1em 2em;
 	border-radius: 50px;
 	color: #FFFFFF;
@@ -206,7 +210,7 @@ footer a {
 	grid-template-rows: auto auto;
 	margin: 1em 0;
 	gap: 15px;
-	background-color: var(--brown);
+	background-image: var(--gradient);
 	border-radius: 50px;
 	padding: 2em 2em;
 }
@@ -225,7 +229,6 @@ footer a {
 	grid-row: span 1;
 	grid-column: span 1;
 	border-radius: 50px;
-	background-color: var(--brown);
 	padding: 1em 1em;
 }
 .categories button {
@@ -235,7 +238,7 @@ footer a {
 	font-size: 1rem;
 	margin-bottom: 10px;
 	font-weight: 600;
-	color: var(--brown);
+	color: var(--blue);
 	border: none;
 	border-radius: 50px;
 	background-color: var(--white);
@@ -271,6 +274,20 @@ footer a {
 	border-radius: 50px;
 	object-fit: cover;
 }
+#background img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+	object-fit: cover;
+}
+#background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
 
 .image-container {
 	display: flex;
@@ -290,7 +307,7 @@ footer a {
 	background-color: var(--white);
 	box-shadow: rgba(0, 0, 0, .5) 0 5px 15px;
 	margin-top: 15px;
-	border: 2px solid var(--brown);
+	border: 2px solid var(--blue2);
 }
 
 .margin-bottom {
@@ -309,6 +326,7 @@ footer a {
 	align-items: center;
 	padding: 0 3em;
 	box-shadow: rgba(0, 0, 0, .5) 0 5px 15px;
+	background-image: var(--gradient);
 }
 
 #register-container {
@@ -326,12 +344,12 @@ footer a {
 	color: var(--white);
 	border: none;
 	border-radius: 50px;
-	background-color: var(--brown);
+	background-color: var(--blue);
 	transition: .5s;
 }
 .btn:hover {
 	transform: scale(1.2);
-	background-color: var(--brown2);
+	background-color: var(--blue2);
 }
 
 #register-container video{
@@ -378,7 +396,7 @@ footer a {
 
 #about {
 	margin: 3em 4em;
-	border: 2px solid var(--brown);
+	border: 2px solid var(--blue);
 	border-radius: 50px;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -457,7 +475,7 @@ footer a {
 #side-left iframe{
 	width: 100%;
 	border-radius: 50px;
-	border: 2px solid var(--brown);
+	border: 2px solid var(--blue);
 }
 
 #send-btn {
